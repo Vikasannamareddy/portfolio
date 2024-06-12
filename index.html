@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compitable" content=""IE_ edge">
+        <meta  name="viewport" content="width-device-width,initial-scale=1:0">
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div id="header">
+            <div class="container">
+                
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">  Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Software Developer</p>
+                    <h1>Hi, I am <span>Vikas Annamareddy</span> from India</h1>
+                </div>
+            </div>
+        </div>
+        <!------------------about------------->
+        <div id="about">
+            <div class="row">
+                <div class="about-col-1">
+                    <img  style="width: 50%; margin-left: 100px;" src="images/user.jpg">
+                </div>
+                <div style="margin-right: 200px;"  class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am vikas studying computer science in Andhra University college of engineering</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span></span>PYTHON</li>
+                            <li><span></span>SQL</li>
+                            <li><span></span>HTML</li>
+                            <li><span></span>CSS</li>
+                            <li><span></span>MACHINE LEARNING</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>October 2022-November2022</span><br>Internship in machine learning at internshala online</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2024</span><br>B.Tech in Computer science from Andhra University</li>
+                            <li><span>2018-2020</span><br>Intermediate M.P.C from Sasi Junoir College </li>
+                            <li><span>2017-2018</span> <br>10th Standard from Sasi English Medium High School</li>
+                        </ul>
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+        <!-----------services------------->
+        <div id="services">
+            <div class="container">
+                <h1 style="text-align: center;" class="sub-title">My services</h1>
+                <div class="services-list">
+                    <div> 
+                        <h2>Web Design</h2>
+                    </div>
+                    <div> 
+                        <h2>Database Administration</h2>
+                    </div>
+                    <div> 
+                        <h2>Data Analysis</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------portfolio---->
+        <div style="text-align: center;" id="portfolio">
+            <div class="container">
+                <h1  class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <a  href="C:\Users\Vikas\OneDrive\Desktop\portfolio\dice">3 PLAYER DICE GAME</a>
+                    </div>
+                    <div class="work">
+                        <a style="text-align: center" href="C:\Users\Vikas\OneDrive\Desktop\portfolio\temp converter">TEMPARATURE CONVERTER</a>
+                    </div>
+                    <div class="work">
+                        <a href="C:\Users\Vikas\OneDrive\Desktop\portfolio\msg classify">MESSAGE SPAM CLASSIFIER</a>
+                    </div>
+                    <div class="work">
+                        <a href="C:\Users\Vikas\OneDrive\Desktop\portfolio\word correction">WORD CORRECTION</a>
+                    </div>
+                </div>
+                <a href="#" class="btn btn2">See more</a>
+            </div>
+        </div>
+        <!----------------contact---->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 style="text-align: center;" class="sub-title">Contact Me</h1>
+                        <p><img style="width: 15px" src="images/mail.jpeg"> vikasannamareddy1456@gmail.com</p>
+                        <p><img style="width: 15px" src="images/phone.png"> 6281049266</p>
+                        <div class="social-icons">
+                            <p><img style="width: 15px" src="images/facebook.jpeg"> Vikas Annamareddy </p>
+                            <p><img style="width: 15px" src="images/instagram.jpeg"> Vikas Annamareddy </p>
+                            <p><img style="width: 15px" src="images/linkedin.png"> vikas annamareddy </p>
+                        </div>
+                        <a href="images/GFG Resume.pdf"download class="btn btn2">Download CV</a>
+                    </div> 
+                    <div class="contact-right">
+                        <h1 style="text-align: center;" class="sub-title">Feedback</h1>
+                         <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p style="text-align: center">Copyright @ Vikas </p>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                 for(tabcontent of tabcontents){
+                     tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");{
+                document.getElementById(tabname).classList.add("active-tab");
+                }
+             }
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzCxZjZmCnFOGgrTl8zT0Qdu7vV-QTNwcpR7aJvn8aUjuzrvlyFq5q68O4dx0CnZ9jqlQ/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg=document.getElementById("msg")
+             form.addEventListener('submit', e => {
+               e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML=""
+                    },5000)
+                    form.reset()
+                    })
+                .catch(error => console.error('Error!', error.message))
+           })
+        </script>>
+    </body>
+</html>
